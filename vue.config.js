@@ -1,5 +1,5 @@
 module.exports = {
 	transpileDependencies: ['vuetify'],
-	publicPath: '/shopcake/',
+	publicPath: '/vue-cakeshop/',
 	outputDir: 'docs',
 };
