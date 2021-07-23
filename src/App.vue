@@ -6,10 +6,10 @@
 					<thead>
 						<tr>
 							<th class="text-left">
-								商品名
+								Item
 							</th>
-							<th>個数</th>
-							<th>価格</th>
+							<th>Quantity</th>
+							<th>Price</th>
 							<th />
 						</tr>
 					</thead>
@@ -21,7 +21,7 @@
 							<!-- <tr> -->
 							<td>{{ item.name }}</td>
 							<td>{{ item.quantity }}</td>
-							<td>{{ item.price.toLocaleString() }}円</td>
+							<td>${{ item.price.toLocaleString() }}</td>
 							<!-- <td>{{ item.price.toLocaleString() }}円</td> -->
 							<td>
 								<v-icon @click="deleteItemFromCart(item.id)">
@@ -31,10 +31,10 @@
 						</tr>
 						<tr>
 							<td class="bold">
-								合計
+								Total
 							</td>
 							<td>{{ getTotalQuantity }}</td>
-							<td>{{ getTotalPrice }}円</td>
+							<td>${{ getTotalPrice }}</td>
 							<td />
 						</tr>
 					</tbody>
@@ -59,14 +59,14 @@
 
 					<v-card-title>{{ cake.name }}</v-card-title>
 
-					<v-card-subtitle>{{ cake.price }}円</v-card-subtitle>
+					<v-card-subtitle>${{ cake.price }}</v-card-subtitle>
 
 					<v-card-actions @click="addToCart(cake.id)">
 						<v-btn
 							button
 							class="error"
 						>
-							カートに入れる
+							ADD TO CART
 						</v-btn>
 					</v-card-actions>
 				</v-card>
